@@ -21,7 +21,7 @@
   flex-direction: row;
   gap: 2vw;
 }
-.app-header-navigation .submenu a {
+.app-header-navigation .submenu h2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,15 +33,15 @@
   padding: 0 0.6vw;
   position: relative;
 }
-.app-header-navigation .submenu a .text {
+.app-header-navigation .submenu h2 .text {
   font-weight: 400;
 }
-.app-header-navigation .submenu a .material-symbols-outlined {
+.app-header-navigation .submenu h2 .material-symbols-outlined {
   font-size: 16px;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   transition: all 0.4s ease-out;
 }
-.app-header-navigation .submenu a::before {
+.app-header-navigation .submenu h2::before {
   content: "";
   position: absolute;
   left: 0;
@@ -53,11 +53,11 @@
   transform-origin: right;
   transition: transform 0.6s ease-out;
 }
-.app-header-navigation .submenu a:hover .material-symbols-outlined, .app-header-navigation .submenu a:focus .material-symbols-outlined {
+.app-header-navigation .submenu h2:hover .material-symbols-outlined, .app-header-navigation .submenu h2:focus .material-symbols-outlined {
   transition: all 0.4s ease-out;
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
-.app-header-navigation .submenu a:hover::before, .app-header-navigation .submenu a:focus::before {
+.app-header-navigation .submenu h2:hover::before, .app-header-navigation .submenu h2:focus::before {
   animation: underline 1.3s ease-out forwards;
 }
 @keyframes underline {
@@ -71,17 +71,17 @@
     transform: scaleX(1);
   }
 }
-.app-header-navigation .submenu a.active .text {
+.app-header-navigation .submenu h2.active .text {
   font-weight: 700;
 }
-.app-header-navigation .submenu a.active .material-symbols-outlined {
+.app-header-navigation .submenu h2.active .material-symbols-outlined {
   font-size: 16px;
   font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 24;
 }
-.app-header-navigation .submenu a.active::before {
+.app-header-navigation .submenu h2.active::before {
   height: 2px;
 }
-.app-header-navigation .submenu a.active:hover .material-symbols-outlined, .app-header-navigation .submenu a.active:focus .material-symbols-outlined {
+.app-header-navigation .submenu h2.active:hover .material-symbols-outlined, .app-header-navigation .submenu h2.active:focus .material-symbols-outlined {
   transition: all 0.4s ease-out;
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
@@ -298,24 +298,78 @@
     transition: 0.5s;
   }
 }
-.dashboard {
+.profile {
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas: "sidebar topbar" "sidebar main";
 }
-.dashboard .topbar {
+.profile .topbar {
   grid-area: topbar;
 }
-.dashboard .sidebar {
+.profile .sidebar {
   grid-area: sidebar;
 }
-.dashboard .content {
+.profile .content {
   grid-area: main;
   padding: 2.1vw 1.9vw;
   width: 100%;
   min-height: 100vh;
+}
+.profile .content .Profile-page {
+  padding: 20px;
+}
+.profile .content .Profile-page .overview {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.profile .content .Profile-page .overview .avatar-box {
+  text-align: center;
+}
+.profile .content .Profile-page .overview .avatar-box .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.profile .content .Profile-page .overview .avatar-box .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.profile .content .Profile-page .overview .info-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.profile .content .Profile-page .overview .info-box .box {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.profile .content .Profile-page .overview .info-box .box:last-child {
+  border-bottom: none;
+}
+.profile .content .Profile-page .overview .info-box .box .heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: grey;
+  margin-bottom: 10px;
+}
+.profile .content .Profile-page .overview .info-box .box .details {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px 20px;
+}
+.profile .content .Profile-page .overview .info-box .box .details span:nth-child(odd) {
+  color: grey;
+  font-weight: bold;
+}
+.profile .content .Profile-page .overview .info-box .box .details span:nth-child(even) {
+  color: black;
 }
 
 *,

@@ -13,7 +13,7 @@
       @include m.flex();
       gap: 2vw;
 
-      a {
+      h2 {
         @include m.flex();
         height: v.$height-topbar;
         gap: 6px;
