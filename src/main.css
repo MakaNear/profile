@@ -366,9 +366,10 @@
   margin-bottom: 15px;
 }
 .profile .content .Profile-page .overview .info-box .box .details {
-  display: grid;
-  grid-template-columns: 150px 1fr 150px 1fr;
   gap: 10px 20px;
+}
+.profile .content .Profile-page .overview .info-box .box .details .c-grey {
+  margin-left: 5vh;
 }
 .profile .content .Profile-page .overview .info-box .box .details span {
   font-size: 16px;
